@@ -8,6 +8,7 @@ import '/screens/meal_detail_screen.dart';
 import './screens/category_meals_screens.dart';
 import './screens/categories_screens.dart';
 import './models/meal.dart';
+import 'onboarding screen/onboarding_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -75,9 +76,9 @@ class _MyAppState extends State<MyApp> {
       title: 'DeliMeals',
       theme: ThemeData(
         primarySwatch: Colors.pink,
-        canvasColor: Color.fromRGBO(255, 254, 229, 1),
+        canvasColor: const Color.fromRGBO(255, 254, 229, 1),
         fontFamily: "Raleway",
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
             bodyLarge: TextStyle(
               color: Color.fromRGBO(20, 51, 51, 1),
             ),
@@ -90,13 +91,14 @@ class _MyAppState extends State<MyApp> {
               fontFamily: "RobotoCondensed",
             )),
       ),
-      initialRoute: '/',
+      initialRoute: '/Onboarding-screen',
       routes: {
         '/': (context) => TabsScreen(_favouritedMeals),
         '/category-meals': (ctx) => CategoryMealsScreen(_availableMeals),
         '/meal-detail': (context) =>
             mealDetailScreen(_toggleFavorite, _isMealFavorite),
         '/filter-screen': (context) => FilterScreens(_setFilters, _filters),
+        '/Onboarding-screen': (context) => OnBoardingScreen(),
       },
       onGenerateRoute: (settings) {
         print(settings.arguments);
@@ -120,9 +122,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DeliMeals'),
+        title: const Text('DeliMeals'),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Navigation Time!'),
       ),
     );
