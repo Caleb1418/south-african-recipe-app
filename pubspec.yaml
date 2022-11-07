@@ -44,6 +44,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_native_splash: ^2.2.14
+
+flutter_native_splash:
+  image: assets/pictures/cutlery.png
+  background_image: assets/pictures/background.png
+
+
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -65,7 +72,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - animations/
-    - 
+    - assets/pictures/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
